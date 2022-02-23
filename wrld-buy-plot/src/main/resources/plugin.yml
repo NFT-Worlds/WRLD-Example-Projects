@@ -1,0 +1,18 @@
+name: wrld-buy-plot
+version: 1.0
+authors: [Jackson, ArkDev]
+main: com.nftworlds.wrldplots.WRLDPlots
+api-version: 1.17
+depend: [WRLDPaymentsAPI, WorldGuard]
+
+commands:
+  sellplot:
+    description: List the plot you're standing on up for sale.
+    usage: /sellplot
+    permission: wrldplots.sellplot
+    default: op
+  buyplot:
+    description: Buy the plot you're standing on.
+    usage: /buyplot
+    default: true
+
