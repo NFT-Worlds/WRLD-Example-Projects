@@ -11,10 +11,9 @@ import org.bukkit.Location;
 
 public class PlotUtility {
     public static ProtectedRegion getPlotAtLocation(Location l) {
-        Location loc = l;
         RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
-        RegionManager regions = container.get(BukkitAdapter.adapt(loc.getWorld()));
-        BlockVector3 position = BlockVector3.at(loc.getX(), loc.getY(), loc.getZ());
+        RegionManager regions = container.get(BukkitAdapter.adapt(l.getWorld()));
+        BlockVector3 position = BlockVector3.at(l.getX(), l.getY(), l.getZ());
         if (regions == null) {
             return null;
         }
