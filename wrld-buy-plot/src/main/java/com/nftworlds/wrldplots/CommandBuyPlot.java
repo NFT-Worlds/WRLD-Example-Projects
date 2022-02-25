@@ -17,7 +17,7 @@ public class CommandBuyPlot implements CommandExecutor {
                 sender.sendMessage("Error: There is no plot for sale here!");
                 return false;
             }
-            PlayerBuyPlotTransaction payload = new PlayerBuyPlotTransaction(region);
+            PlayerBuyPlotPayload payload = new PlayerBuyPlotPayload(region);
             WRLDPlots.getPayments().getNFTPlayer((Player) sender).requestWRLD(
                     price, Network.POLYGON, "Purchasing plot " + region.getId(), payload
             );

@@ -9,9 +9,8 @@ import org.bukkit.event.Listener;
 
 public class PlayerTransactEventListener implements Listener {
     @EventHandler
-    // raw use of parameterized class is fine here, the Spigot event system doesn't support generic events
-    public void onPlayerTransact(PlayerTransactEvent e) {
-        if (e.getPayload() instanceof PlayerBuyPlotTransaction payload) {
+    public void onPlayerTransact(PlayerTransactEvent<?> e) {
+        if (e.getPayload() instanceof PlayerBuyPlotPayload payload) {
             e.getPlayer().playSound(e.getPlayer().getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 15, 0.5F);
             e.getPlayer().sendMessage("Your transaction has been finalized, enjoy your new plot!");
             payload.plotToBuy.getOwners().clear();

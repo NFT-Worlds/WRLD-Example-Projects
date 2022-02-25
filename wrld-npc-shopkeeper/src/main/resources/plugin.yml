@@ -1,0 +1,8 @@
+name: wrld-npc-shopkeeper
+version: 1.0
+authors: [Jackson, ArkDev]
+main: com.nftworlds.wrldshopkeeper.WRLDShopkeeperPlugin
+api-version: 1.17
+depend: [WRLDPaymentsAPI, Citizens]
+
+
