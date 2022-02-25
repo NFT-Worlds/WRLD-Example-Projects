@@ -13,9 +13,6 @@ public class WRLDShopkeeperNPCTrait extends Trait {
         plugin = JavaPlugin.getPlugin(WRLDShopkeeperPlugin.class);
     }
 
-    @Persist("sellsSteak") boolean sellsSteak = false;
-    @Persist("sellsApples") boolean sellsApples = false;
-
     @EventHandler
     public void onRightClick(net.citizensnpcs.api.event.NPCRightClickEvent event){
         if (event.getNPC() != this.getNPC()) {
