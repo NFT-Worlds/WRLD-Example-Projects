@@ -22,7 +22,6 @@ public class AppleItem extends MenuItem {
     public void onItemClick(ItemClickEvent event) {
         PlayerBuyItemPayload payload = new PlayerBuyItemPayload(ITEM);
         double price = 15.0;
-        System.out.println(event.getPlayer().getUniqueId());
         WRLDShopkeeperPlugin.getPayments().getNFTPlayer(event.getPlayer()).requestWRLD(
                 price, Network.POLYGON, "Purchasing 64 apples", payload
         );
