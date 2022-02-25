@@ -3,6 +3,7 @@ package com.nftworlds.wrldshopkeeper;
 import com.nftworlds.wallet.api.WalletAPI;
 import com.nftworlds.wrldshopkeeper.menuitems.AppleItem;
 import com.nftworlds.wrldshopkeeper.menuitems.SteakItem;
+import net.citizensnpcs.api.trait.TraitInfo;
 import ninja.amp.ampmenus.items.CloseItem;
 import ninja.amp.ampmenus.menus.ItemMenu;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -27,7 +28,7 @@ public class WRLDShopkeeperPlugin extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new PlayerTransactEventListener(), this);
         net.citizensnpcs.api.CitizensAPI.getTraitFactory().
-                registerTrait(net.citizensnpcs.api.trait.TraitInfo.create(WRLDShopkeeperNPCTrait.class)
+                registerTrait(TraitInfo.create(WRLDShopkeeperNPCTrait.class)
                         .withName("wrld-food-shopkeeper"));
 
         getServer().getLogger().info("Registered NPC traits!");

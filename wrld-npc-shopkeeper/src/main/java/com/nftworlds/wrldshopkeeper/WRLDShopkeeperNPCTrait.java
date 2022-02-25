@@ -1,5 +1,6 @@
 package com.nftworlds.wrldshopkeeper;
 
+import net.citizensnpcs.api.event.NPCRightClickEvent;
 import net.citizensnpcs.api.persistence.Persist;
 import net.citizensnpcs.api.trait.Trait;
 import org.bukkit.event.EventHandler;
@@ -14,7 +15,7 @@ public class WRLDShopkeeperNPCTrait extends Trait {
     }
 
     @EventHandler
-    public void onRightClick(net.citizensnpcs.api.event.NPCRightClickEvent event){
+    public void onRightClick(NPCRightClickEvent event){
         if (event.getNPC() != this.getNPC()) {
             return;
         }
