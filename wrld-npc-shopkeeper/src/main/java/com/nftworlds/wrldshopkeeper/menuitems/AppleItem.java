@@ -23,7 +23,7 @@ public class AppleItem extends MenuItem {
         PlayerBuyItemPayload payload = new PlayerBuyItemPayload(ITEM);
         double price = 15.0;
         WRLDShopkeeperPlugin.getPayments().getNFTPlayer(event.getPlayer()).requestWRLD(
-                price, Network.POLYGON, "Purchasing 64 apples", payload
+                price, Network.POLYGON, "Purchasing 64 apples", true, payload
         );
     }
 }

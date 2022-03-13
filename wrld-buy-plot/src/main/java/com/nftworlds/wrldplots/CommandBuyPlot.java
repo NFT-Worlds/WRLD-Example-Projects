@@ -19,7 +19,7 @@ public class CommandBuyPlot implements CommandExecutor {
             }
             PlayerBuyPlotPayload payload = new PlayerBuyPlotPayload(region);
             WRLDPlots.getPayments().getNFTPlayer((Player) sender).requestWRLD(
-                    price, Network.POLYGON, "Purchasing plot " + region.getId(), payload
+                    price, Network.POLYGON, "Purchasing plot " + region.getId(), false, payload
             );
         }
         return true;

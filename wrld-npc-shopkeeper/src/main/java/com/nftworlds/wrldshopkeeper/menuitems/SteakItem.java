@@ -23,7 +23,7 @@ public class SteakItem extends MenuItem {
         PlayerBuyItemPayload payload = new PlayerBuyItemPayload(ITEM);
         double price = 20.0;
         WRLDShopkeeperPlugin.getPayments().getNFTPlayer(event.getPlayer()).requestWRLD(
-                price, Network.POLYGON, "Purchasing 32 cooked beef", payload
+                price, Network.POLYGON, "Purchasing 32 cooked beef", true, payload
         );
     }
 }
