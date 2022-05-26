@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.nftworlds:wrld-payments-api:0.2.9">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/nftworlds/wrld-payments-api/0.2.9/wrld-payments-api-0.2.9.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/nftworlds/wrld-payments-api/0.2.9/wrld-payments-api-0.2.9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/nftworlds/wrld-payments-api/0.2.9/wrld-payments-api-0.2.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

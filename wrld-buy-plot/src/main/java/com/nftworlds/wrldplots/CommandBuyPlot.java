@@ -8,6 +8,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.IOException;
+
 public class CommandBuyPlot implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         ProtectedRegion region = PlotUtility.getPlotAtLocation(((Player)sender).getLocation());
@@ -18,9 +20,13 @@ public class CommandBuyPlot implements CommandExecutor {
                 return false;
             }
             PlayerBuyPlotPayload payload = new PlayerBuyPlotPayload(region);
-            WRLDPlots.getPayments().getNFTPlayer((Player) sender).requestWRLD(
-                    price, Network.POLYGON, "Purchasing plot " + region.getId(), false, payload
-            );
+            try {
+                WRLDPlots.getPayments().getNFTPlayer((Player) sender).requestWRLD(
+                        price, Network.POLYGON, "Purchasing plot " + region.getId(), false, payload
+                );
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         return true;
     }
