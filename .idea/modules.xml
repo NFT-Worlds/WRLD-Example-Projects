@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/WRLD-Example-Projects.iml" filepath="$PROJECT_DIR$/.idea/WRLD-Example-Projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wrld-buy-plot/wrld-buy-plot.iml" filepath="$PROJECT_DIR$/wrld-buy-plot/wrld-buy-plot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wrld-npc-shopkeeper/wrld-npc-shopkeeper.iml" filepath="$PROJECT_DIR$/wrld-npc-shopkeeper/wrld-npc-shopkeeper.iml" />
+    </modules>
+  </component>
+</project>
